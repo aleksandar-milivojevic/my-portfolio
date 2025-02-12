@@ -1,0 +1,215 @@
+{
+  "hero": {
+    "imgUrl": "/images/mainImg.png",
+    "name": "Aleksandar Milivojevic",
+    "heading": "Hi! I’m Aleksandar",
+    "typingText": [
+      "Front-End Developer",
+      1500,
+      "Medior Developer",
+      1500
+    ],
+    "description": "From day one, I’ve been deeply involved in blockchain startups, developing complete systems from scratch. My expertise is in React.js, Tailwind CSS, and UI/UX design, ensuring smooth and engaging user experiences. 🖥️",
+    "btnText": "Get in touch",
+    "btnUrl": "contactus"
+  },
+  "socialBtns": [
+    {
+      "icon": "fa-brands:linkedin-in",
+      "iconBgClass": "linkedin",
+      "href": "https://www.linkedin.com/in/aleksandar-milivojevic"
+    },
+    {
+      "icon": "fa-brands:github",
+      "iconBgClass": "github",
+      "href": "https://github.com/aleksandar-milivojevic"
+    }
+  ],
+  "brands": [
+    {
+      "src": "/images/brand-1.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-2.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-1.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-2.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-1.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-2.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-1.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-2.svg",
+      "alt": "Logolpsum"
+    }
+  ],
+  "about": {
+    "imgSrc": "/images/Rectangle.png",
+    "miniTitle": "",
+    "title": "ABOUT <span>ME</span>",
+    "description": "I turn ideas into functional, and responsive web applications. As a React.js and Tailwind CSS developer, I focus on creating smooth, intuitive, and visually appealing user interfaces. With an eye for detail and a drive for optimization, I ensure every project runs efficiently and looks stunning. Let’s build something amazing! 🚀",
+    "funfacts": [
+      {
+        "title": "Websites",
+        "number": 40
+      },
+      {
+        "title": "Web Apps",
+        "number": 15
+      },
+      {
+        "title": "Years Experience",
+        "number": 4
+      }
+    ],
+    "btnText": "Get in touch",
+    "btnUrl": "contactus"
+  },
+  "projects": {
+    "sectionHeading": {
+      "miniTitle": "My Work",
+      "title": "RECENT PROJECTS"
+    },
+    "allProjects": [
+      {
+        "thumbUrl": "/images/NFT.png",
+        "title": "FULL STACK",
+        "subTitle": "Web Design, App Develop",
+        "details": {
+          "title": "NFT MARKETPLACE",
+          "description": "In this NFT marketplace project, I took the lead in developing the complete front-end and contributed to the back-end. This platform enables seamless buying and selling of NFTs, providing users with an intuitive and engaging experience. The interface is designed for maximum accessibility and ease of use, ensuring a smooth transaction process for all digital assets.",
+          "type": "Web App",
+          "langages": "React, Tailwind",
+          "country": "United Arab Emirates",
+          "url": "https://nft.arabianchain.org/"
+        }
+      },
+      {
+        "thumbUrl": "/images/helloFamily2.png",
+        "title": "FULL STACK",
+        "subTitle": "Web Store, WordPress",
+        "details": {
+          "title": "Hello Family",
+          "description": "I developed the entire front-end, implementing a clean and modern UI with smooth animations and an intuitive shopping flow. The website is fully optimized for performance, achieving a 99/100 score on both desktop and mobile. By leveraging best practices in web development, I ensured that the HelloFamily store is both visually appealing and technically robust.",
+          "type": "Web App",
+          "langages": "WordPress, Elementor, WooCommerce",
+          "country": "Serbia",
+          "url": "https://hellofamily.rs/"
+        }
+      },
+      {
+        "thumbUrl": "/images/ArabianChain.png",
+        "title": "FRONT-END",
+        "subTitle": "Web Design, App Design",
+        "details": {
+          "title": "Website, Web App",
+          "description": "The main website for Arabianchain Technology, a blockchain company, was entirely developed by me using React and styled with Tailwind. The site features multiple pages, including a page where you can send DUBX (the cryptocurrency of ArabianChain) to another wallet address through the site.",
+          "type": "Website, Web App",
+          "langages": "React, Tailwind",
+          "country": "United Arab Emirates",
+          "url": "https://www.arabianchain.org/"
+        }
+      },
+      {
+        "thumbUrl": "/images/explorer.png",
+        "title": "FRONT-END",
+        "subTitle": "Web Design, App Design",
+        "details": {
+          "title": "Blockchain Explorer",
+          "description": "The blockchain explorer contains comprehensive information about all transactions on our blockchain. I have styled all pages and ensured that the site is fully responsive across all devices.",
+          "type": "Website",
+          "langages": "HTML, CSS, JS",
+          "country": "United Arab Emirates",
+          "url": "https://explorer.arabianchain.org/"
+        }
+      },
+      {
+        "thumbUrl": "/images/galaxy.png",
+        "title": "FRONT-END",
+        "subTitle": "Web Design, App Design",
+        "details": {
+          "title": "Web Wallet",
+          "description": "Galaxy Web Wallet is a web app through which you can create your address on the DUBX blockchain, check your balance, send your coins, and more.",
+          "type": "Web App",
+          "langages": "HTML, CSS, JS",
+          "country": "United Arab Emirates",
+          "url": "https://galaxy.arabianchain.org/"
+        }
+      },
+      {
+        "thumbUrl": "/images/dubxPool.png",
+        "title": "FRONT-END",
+        "subTitle": "Web App",
+        "details": {
+          "title": "Mining Pool",
+          "description": "DUBX Mining Pool is a high-performance mining pool designed for efficiency, security, and decentralized blockchain support. It provides miners with optimized rewards, low fees, and real-time analytics, ensuring a seamless mining experience. Built with stability in mind, DUBX offers reliable uptime and advanced monitoring tools, making it the go-to choice for miners looking to maximize their earnings.",
+          "type": "Web App",
+          "langages": "HTML, CSS, JS",
+          "country": "United Arab Emirates",
+          "url": "http://dubxpool.arabianchain.org/"
+        }
+      }
+    ]
+  },
+  "experience": {
+    "sectionHeading": {
+      "miniTitle": "Experience",
+      "title": "My Work <span>Experience</span>"
+    },
+    "allExperience": [
+      {
+        "designation": "Freelance",
+        "company": "ID PROTECT",
+        "duration": "Jun 2024 - Feb 2025",
+        "jobType": "Full time",
+        "companyTitle": "Front End Development",
+        "companyDescription": "Created and provided functional websites and web applications to meet targets, aligned with the needs of the company. Successfully managed projects within budget and deadlines by effectively managing resources. Custom-build websites from initial concepts through to final delivery. Recommended new websites and web apps features and styles to improve usability. Assisted in testing and deploying web applications. Monitored website performance and recommended improvements. Updated existing website in terms of content and visual appearance - enhanced the look, functionality and appearance of websites. Delivering effective training to teammates and clients (how to use their platforms, websites and apps). Custom-build websites and apps from initial concepts through to final delivery. Successfully manage projects within budget and deadlines by effectively managing resources. Creating responsive websites and web applications (SaaS) according to a given design, pixel to pixel for different stages."
+      },
+      {
+        "designation": "CEO",
+        "company": "ID PROTECT",
+        "duration": "MARTH 2023 - PRESENT",
+        "jobType": "Full time",
+        "companyTitle": "Pet ID",
+        "companyDescription": "As the CEO of ID Protect, I’ve had the opportunity to combine my passion for technology with my love for animals. One of our key products, Pet ID, is a smart pet tag with a QR code that helps reunite lost pets with their owners. Beyond coding, I truly enjoy creating solutions that make a difference, and Pet ID is something I’m especially proud of—it’s not just a product, but a way to help keep pets safe. Currently, Pet ID is available in pet shops across Serbia and Bosnia, making it easier than ever for pet owners to protect their furry friends."
+      },
+      {
+        "designation": "Front-end Developer",
+        "company": "ARABIANCHAIN TECHNOLOGY",
+        "duration": "JAN 2022 - SEO 2023",
+        "jobType": "Full time",
+        "companyTitle": "Front End Development",
+        "companyDescription": "Created and provided functional websites and web applications to meet targets, aligned with the needs of the company. Successfully managed projects within budget and deadlines by effectively managing resources. Recommended new websites and web apps features and styles to improve usability. Assisted in testing and deploying web applications. Custom-build websites and apps from initial concepts through to final delivery."
+      }
+    ]
+  },
+  "contact": {
+    "sectionHeading": {
+      "title": "Hire Me",
+      "subTitle": "Looking for good contract job, but I am always available for freelancing if the right project comes along, Feel free to contact me."
+    },
+    "contactImg": "/images/verify.png",
+    "contactInfo": [
+      {
+        "title": "Write an e-mail",
+        "email": "amilivojevic185@gmail.com"
+      }
+    ]
+  }
+}
