@@ -1,59 +1,82 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
+  const formRef = useRef(null);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    user_name: "",
+    user_email: "",
+    subject: "",
+    message: "",
   });
+  const [isSending, setIsSending] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // Handler for input field changes
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormData(prevFormData => ({
+    setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
     }));
   };
+  useEffect(() => {
+    console.log(formData);
+  }, [formData]);
 
-  const onSubmit = async event => {
-    event.preventDefault();
-    setLoading(true);
-    const formData = new FormData(event.target);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log("Form data before sending:", formData);
+    console.log("Form reference:", formRef.current);
 
-    formData.append('access_key', '6d7bc3fc-6190-43c5-8298-89ac5ef7494f');
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: json,
-    }).then(res => res.json());
-
-    if (res.success) {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setLoading(false);
+    if (!formData.user_name || !formData.user_email || !formData.message) {
+      setErrorMessage("All fields are required.");
+      return;
     }
+
+    setIsSending(true);
+    setErrorMessage("");
+
+    emailjs
+      .sendForm(
+        "service_dyqd8hm", // Service ID
+        "template_8w1w5pz", // Template ID
+        formRef.current,
+        "grRixWY2V0ERZ5YQO" // Public Key
+      )
+      .then(
+        (response) => {
+          console.log("Email sent!", response.status, response.text);
+          alert("Your message has been sent!");
+          setFormData({
+            user_name: "",
+            user_email: "",
+            subject: "",
+            message: "",
+          });
+          setIsSending(false);
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          setErrorMessage("Failed to send message. Try again later.");
+          setIsSending(false);
+        }
+      );
   };
+
   return (
-    <form id="contact-form" onSubmit={onSubmit}>
+    <form ref={formRef} id="contact-form" onSubmit={sendEmail}>
       <div className="row gx-3 gy-4">
         <div className="col-md-6">
           <div className="form-group">
             <label className="form-label">Your Name</label>
             <input
-              name="name"
+              name="user_name"
               placeholder="Name *"
               className="form-control"
               type="text"
-              value={formData.name}
+              value={formData.user_name}
               onChange={handleInputChange}
               required
             />
@@ -63,11 +86,11 @@ export default function ContactForm() {
           <div className="form-group">
             <label className="form-label">Your Email</label>
             <input
-              name="email"
+              name="user_email"
               placeholder="Email *"
               className="form-control"
               type="email"
-              value={formData.email}
+              value={formData.user_email}
               onChange={handleInputChange}
               required
             />
@@ -101,13 +124,15 @@ export default function ContactForm() {
             />
           </div>
         </div>
+        {errorMessage && <p className="text-red-500 mb-4">{errorMessage}</p>}
         <div className="col-md-12">
           <div className="send">
             <button
-              className={`px-btn w-100 ${loading ? 'disabled' : ''}`}
+              className={`px-btn w-100 ${loading ? "disabled" : ""}`}
               type="submit"
+              disabled={isSending}
             >
-              {loading ? 'Sending...' : 'Send Message'}
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </div>
         </div>
@@ -115,3 +140,28 @@ export default function ContactForm() {
     </form>
   );
 }
+
+// const onSubmit = async event => {
+//   event.preventDefault();
+//   setLoading(true);
+//   const formData = new FormData(event.target);
+
+//   formData.append('access_key', '6d7bc3fc-6190-43c5-8298-89ac5ef7494f');
+
+//   const object = Object.fromEntries(formData);
+//   const json = JSON.stringify(object);
+
+//   const res = await fetch('https://api.web3forms.com/submit', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       Accept: 'application/json',
+//     },
+//     body: json,
+//   }).then(res => res.json());
+
+//   if (res.success) {
+//     setFormData({ name: '', email: '', subject: '', message: '' });
+//     setLoading(false);
+//   }
+// };
